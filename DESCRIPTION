@@ -1,0 +1,9 @@
+Package: rjp
+Type: Package
+Title: Utilities assembled by R Pruim
+Version: 0.1.0
+Author: Randall Pruim
+Maintainer: Randall Pruim <rpruim@calvin.edu>
+Description: A collection of miscellaneous utility functions.
+License: GPL (>= 2)
+LazyData: TRUE

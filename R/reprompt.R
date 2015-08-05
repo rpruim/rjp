@@ -6,6 +6,9 @@
 #' @param file a file containing mixed R code and output.  If \code{NULL}, the edit buffer will
 #' be used.
 #' @param prompt,continue the prompt and continue prompt for R code.
+#' @details The value of this function is in its side effects.  The modified code
+#' will be printed and if \code{file} is \code{NULL}, it will also be pasted into the
+#' pasteboard buffer.
 reprompt <-
   function(
     comment = "##",
@@ -27,5 +30,6 @@ reprompt <-
     id_commands <- grep(cmdPrompts, to_edit) # which are command or continuation lines
     to_edit[id_commands] <- sub(cmdPrompts, "", to_edit[id_commands]) # remove prompts
     to_edit[-id_commands] <- paste(comment, to_edit[-id_commands]) # comment output
+    if(is.null(file)) writeLines(to_edit, pipe("pbcopy"))
     writeLines(to_edit)
   }

@@ -30,6 +30,9 @@ reprompt <-
     id_commands <- grep(cmdPrompts, to_edit) # which are command or continuation lines
     to_edit[id_commands] <- sub(cmdPrompts, "", to_edit[id_commands]) # remove prompts
     to_edit[-id_commands] <- paste(comment, to_edit[-id_commands]) # comment output
-    if(is.null(file)) writeLines(to_edit, pipe("pbcopy"))
+    if(is.null(file)) {
+      message("The following will be placed on the clipboard/pasteboard.\n")
+      writeLines(to_edit, pipe("pbcopy"))
+    }
     writeLines(to_edit)
   }

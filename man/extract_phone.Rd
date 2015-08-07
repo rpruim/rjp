@@ -4,14 +4,15 @@
 \alias{extract_phone}
 \title{Extract phone numbers}
 \usage{
-extract_phone(x, area = NULL)
+extract_phone(x, area = NULL, na.return = NA)
 }
 \description{
 Extract phone numbers
 }
 \examples{
-p <- c("1234567", "1234567890", "(123) 456-7890", "123.456.7890")
+p <- c(NA, "1234567", "1234567890", "(123) 456-7890", "123.456.7890")
 extract_phone(p)
 extract_phone(p, area=555)
+extract_phone(p, area=555, na.return = "no phone number supplied")
 }
 

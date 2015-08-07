@@ -5,11 +5,12 @@
 #' @importFrom tidyr extract_numeric
 #' @export
 #' @examples
-#' p <- c("1234567", "1234567890", "(123) 456-7890", "123.456.7890")
+#' p <- c(NA, "1234567", "1234567890", "(123) 456-7890", "123.456.7890")
 #' extract_phone(p)
 #' extract_phone(p, area=555)
+#' extract_phone(p, area=555, na.return = "no phone number supplied")
 #'
-extract_phone <- function(x, area = NULL) {
+extract_phone <- function(x, area = NULL, na.return = NA) {
   cx <- gsub("[^0123456789 ]", "", as.character(x))
   nx <- tidyr::extract_numeric(cx) %% 1e10
   if (!is.null(area)) {
@@ -27,5 +28,5 @@ extract_phone <- function(x, area = NULL) {
   area <- ifelse(area < 100, "", paste0("(", area, ") ") )
   exchange <- trunc(nx / 1e4) %% 1e3
   number <- nx %% 1e4
-  paste0(area, exchange, "-", number)
+  ifelse( is.na(nx), na.return, paste0(area, exchange, "-", number))
 }

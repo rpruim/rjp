@@ -10,7 +10,7 @@ extract_phone(x, area = NULL, na.return = NA)
 Extract phone numbers
 }
 \examples{
-p <- c(NA, "1234567", "1234567890", "(123) 456-7890", "123.456.7890")
+p <- c(NA, "1234567", "1234567890", "(123) 456-7890", "123.456.7890", 12345678900)
 extract_phone(p)
 extract_phone(p, area=555)
 extract_phone(p, area=555, na.return = "no phone number supplied")

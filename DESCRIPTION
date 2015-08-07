@@ -7,3 +7,4 @@ Maintainer: Randall Pruim <rpruim@calvin.edu>
 Description: A collection of miscellaneous utility functions.
 License: GPL (>= 2)
 LazyData: TRUE
+Imports: tidyr

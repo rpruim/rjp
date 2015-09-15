@@ -9,6 +9,8 @@
 #' @details The value of this function is in its side effects.  The modified code
 #' will be printed and if \code{file} is \code{NULL}, it will also be pasted into the
 #' pasteboard buffer.
+#' @export
+#'
 reprompt <-
   function(
     comment = "##",

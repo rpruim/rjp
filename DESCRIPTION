@@ -8,11 +8,14 @@ Description: A collection of miscellaneous utility functions.
 License: GPL (>= 2)
 LazyData: TRUE
 Imports:
+    lazyeval,
+    readr,
     tidyr,
     magrittr,
     reprex,
     utils
 RoxygenNote: 6.1.0
 Roxygen: list(markdown = TRUE)
+Encoding: UTF-8
 URL: https://github.com/rpruim/rjp
 BugReports: https://github.com/rpruim/rjp/issues

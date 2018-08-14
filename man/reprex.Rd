@@ -12,6 +12,10 @@ reprex(x, ..., fig.width = 6, fig.height = 3, opts_chunk = list())
 
 \item{...}{Additional arguments passed on to \code{\link[reprex:reprex]{reprex::reprex()}}.}
 
+\item{fig.width}{Width of figures.}
+
+\item{fig.height}{Height of figures.}
+
 \item{opts_chunk}{Named list. Optional
 \href{{http://yihui.name/knitr/options/}{knitr chunk and package options}} that
 are forwarded to \code{knitr::opts_chunk$set()} and \code{knitr::opts_knit$set()},

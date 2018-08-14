@@ -5,6 +5,8 @@
 #'
 #' @inheritParams reprex::reprex
 #' @param ... Additional arguments passed on to [`reprex::reprex()`].
+#' @param fig.width Width of figures.
+#' @param fig.height Height of figures.
 #' @importFrom reprex reprex
 #' @importFrom utils modifyList
 #' @export

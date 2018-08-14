@@ -16,9 +16,7 @@ creating documents of this type, in which case the output should be written
 
 \item{lines}{Optional. An integer vector specifying which lines to print}
 
-\item{before, after}{Text to insert before or after the help file, such as}
-
-\item{package}{A character string containing the package name to search. Necessary if two packages share a function name.
+\item{before, after}{Text to insert before or after the help file, such as
 \code{<quote>} and \code{</quote>} for printing the text as quoted HTML}
 }
 \description{

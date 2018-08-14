@@ -12,16 +12,16 @@
 #'
 extract_phone <- function(x, area = NULL, na.return = NA) {
   cx <- gsub("[^0123456789]", "", as.character(x))
-  nx <- tidyr::extract_numeric(cx)
+  nx <- readr::parse_number(cx)
   if (!is.null(area)) {
-    tidyr::extract_numeric(area)
+    readr::parse_number(area)
   } else {
     area <- 0
   }
   nx <-
     ifelse(
       nx < 1e7 & !is.null(area),
-      tidyr::extract_numeric(area) * 1e7 + nx,
+      readr::parse_number(area) * 1e7 + nx,
       nx)
 
   nx <- ifelse( nx >= 1e10 | nx <= 99999, NA, nx)

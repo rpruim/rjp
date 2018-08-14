@@ -3,6 +3,9 @@
 #' Extract phone numbers
 #'
 #' @importFrom tidyr extract_numeric
+#' @param x A string or number to extract phone number from.
+#' @param area An area code
+#' @param na.return Value to return when no telephone number is found.
 #' @export
 #' @examples
 #' p <- c(NA, "1234567", "1234567890", "(123) 456-7890", "123.456.7890", 12345678900)

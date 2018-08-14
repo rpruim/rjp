@@ -6,6 +6,13 @@
 \usage{
 extract_phone(x, area = NULL, na.return = NA)
 }
+\arguments{
+\item{x}{A string or number to extract phone number from.}
+
+\item{area}{An area code}
+
+\item{na.return}{Value to return when no telephone number is found.}
+}
 \description{
 Extract phone numbers
 }

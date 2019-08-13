@@ -12,9 +12,14 @@ Imports:
     readr,
     tidyr,
     magrittr,
+    dplyr,
     reprex,
-    utils
-RoxygenNote: 6.1.0
+    utils,
+    glue,
+    stringr,
+    lubridate,
+    ggplot2
+RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
 URL: https://github.com/rpruim/rjp
